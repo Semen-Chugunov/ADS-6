@@ -1,6 +1,7 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#include <string>
 
 template<typename T, int size>
 class TPQueue {
@@ -38,7 +39,7 @@ class TPQueue {
         }
     }
     T& pop() {
-        if (empt()) 
+        if (empt())
             throw std::string("empty");
         c--;
         return arr[f++ % size];
